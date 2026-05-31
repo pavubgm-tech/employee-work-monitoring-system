@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Cybersecurity Dashboard</h1>
+
+    <p>Real-Time Cybersecurity Monitoring Dashboard</p>
+
+    <div class="stats-container">
+
+        <div class="card">
+            <h2>Total Logs</h2>
+            <h1 id="totalLogs">0</h1>
+        </div>
+
+        <div class="card">
+            <h2>Failed Logins</h2>
+            <h1 id="failedLogins">0</h1>
+        </div>
+
+        <div class="card">
+            <h2>Total Users</h2>
+            <h1 id="totalUsers">0</h1>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <h2>System Status</h2>
+        <p>Server Running Securely</p>
+    </div>
+
+    <div class="card">
+        <h2>Threat Alerts</h2>
+        <p>No Threats Detected</p>
+    </div>
+
+    <div class="card">
+
+        <h2>User Secure Notes</h2>
+
+        <table border="1" width="100%" cellpadding="10">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Note</th>
+                    <th>Created At</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="notesTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Activity Logs</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Username"
+        >
+
+        <button onclick="searchLogs()">
+            Search
+        </button>
+
+        <button onclick="fetchLogs()">
+            Reset
+        </button>
+
+        <table border="1" width="100%" cellpadding="10">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Activity</th>
+                    <th>Time</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="logsTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <button onclick="logoutUser()">
+        Logout
+    </button>
+
+</div>
+
+<footer style="margin-top:40px;text-align:center;">
+
+    Cybersecurity Audit System © 2026
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
